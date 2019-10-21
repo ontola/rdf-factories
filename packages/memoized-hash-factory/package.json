@@ -1,0 +1,42 @@
+{
+  "name": "@ontola/memoized-hash-factory",
+  "version": "1.0.0",
+  "description": "RDF Factory optimized for memory usage.",
+  "keywords": [
+    "rdf",
+    "rdfjs",
+    "data factory",
+    "rdf factory",
+    "ontologies",
+    "ontologies/core",
+    "linked data",
+    "link-lib",
+    "link-redux"
+  ],
+  "author": "Fletcher91 <thom@ontola.io>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "dist/cjs/memoized-hash-factory.js",
+  "module": "dist/module/memoized-hash-factory.js",
+  "types": "dist/module/memoized-hash-factory.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "transpile": "yarn run transpile:cjs && yarn run transpile:module",
+    "transpile:cjs": "./node_modules/.bin/tsc -p tsconfig.json --outDir ./dist/cjs -m commonjs",
+    "transpile:module": "./node_modules/.bin/tsc -p tsconfig.json --outDir ./dist/module -d -m es6",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@ontologies/core": "1.5.2-strict-13",
+    "murmurhash-js": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.4"
+  }
+}

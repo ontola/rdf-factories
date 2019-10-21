@@ -1,0 +1,11 @@
+{
+  "name": "root",
+  "description": "A collection of RDFJS Task force and @ontologies/core compatible data factories.",
+  "author": "Fletcher91 <thom@ontola.io>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.18.1",
+    "typescript": "^3.6.4"
+  }
+}
