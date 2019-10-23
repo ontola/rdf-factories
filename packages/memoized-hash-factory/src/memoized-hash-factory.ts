@@ -2,11 +2,13 @@ import {
   BlankNode,
   Comparable,
   DataFactory,
+  IdentityFactory,
   Literal,
   NamedNode,
   PlainFactory,
   Quad,
   Quadruple,
+  RDFObject,
   TermType,
 } from "@ontologies/core";
 import { murmur3 } from "murmurhash-js";
@@ -18,11 +20,6 @@ type SomeNode = BlankNode | NamedNode;
 interface MemoizedHashFactoryInternals {
   memoizationMap: { [k: string]: AnyRDFObject };
   seedBase: number;
-}
-
-export interface IdentityFactory<IndexType> extends DataFactory {
-  findById(id: IndexType): AnyRDFObject;
-  id(obj: AnyRDFObject): number;
 }
 
 export interface DataFactoryArgs {
@@ -71,7 +68,7 @@ const datatypes = {
  *
  * This version uses hashing which might be more CPU consuming but has deterministic id creation.
  */
-export class MemoizedHashFactory extends PlainFactory implements IdentityFactory<number>, MemoizedHashFactoryInternals {
+export class MemoizedHashFactory extends PlainFactory implements IdentityFactory<number, AnyRDFObject>, MemoizedHashFactoryInternals {
   public bnIndex: number;
   /**
    * The seed base is used as a modifiable base index.
@@ -206,7 +203,12 @@ export class MemoizedHashFactory extends PlainFactory implements IdentityFactory
     return this.id(a) === this.id(b);
   }
 
-  public findById(id: number | string): AnyRDFObject {
+  /** @deprecated Use {fromId} instead */
+  public findById (id: number): AnyRDFObject {
+    return this.fromId(id);
+  }
+
+  public fromId(id: number | string): AnyRDFObject {
     return this.memoizationMap[id];
   }
 

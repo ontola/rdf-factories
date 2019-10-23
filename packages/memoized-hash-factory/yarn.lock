@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ontologies/core@1.5.2-strict-13":
-  version "1.5.2-strict-13"
-  resolved "https://registry.yarnpkg.com/@ontologies/core/-/core-1.5.2-strict-13.tgz#bbbbb3346adf49fa86868b9af8eb263ffce1eec3"
-  integrity sha512-s4rIxysPnfFbJ4GQdF9KEQbCz5zO5DEBQnCODaChzCoOZ2jAtesvtbF+7fxg8r8CMkqobG/EDyWMJ0qKBbsjKQ==
+"@ontologies/core@1.5.2-strict-15":
+  version "1.5.2-strict-15"
+  resolved "https://registry.yarnpkg.com/@ontologies/core/-/core-1.5.2-strict-15.tgz#2d3510ca2633748b7b7cfe0d3b64c31fad571d74"
+  integrity sha512-CAT55rywpOREF/POqLpvGvlWM3RMzGNn8llE5L+15laOVdaJbxdtP4H/qdm/uHrL/kaRFn9e+Guizm2XUfAnIg==
   dependencies:
     "@ungap/global-this" "^0.3.1"
 
