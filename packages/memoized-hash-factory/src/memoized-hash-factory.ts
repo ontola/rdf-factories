@@ -8,7 +8,6 @@ import {
   PlainFactory,
   Quad,
   Quadruple,
-  RDFObject,
   TermType,
 } from "@ontologies/core";
 import { murmur3 } from "murmurhash-js";
@@ -40,14 +39,28 @@ const rdfBase = (factory: DataFactory): any => ({
   },
 
   /* rdflib compat */
+
+  /** @deprecated */
   toCanonical(): any {
     return this;
   },
 
+  /** @deprecated */
+  toNT(): string {
+    return factory.toNQ(this);
+  },
+
+  /** @deprecated */
+  toString() {
+    return factory.toNQ(this);
+  },
+
+  /** @deprecated */
   get uri(): string {
     return this.value;
   },
 
+  /** @deprecated */
   set uri(uri: string) {
     this.value = uri;
   },
@@ -71,7 +84,7 @@ const datatypes = {
 export class MemoizedHashFactory extends PlainFactory implements IdentityFactory<number, AnyRDFObject>, MemoizedHashFactoryInternals {
   public bnIndex: number;
   /**
-   * The seed base is used as a modifiable base index.
+   * The seed  is used as a modifiable base index.
    * We increase the number with a fixed amount per term type to generate different hashes for terms with the same
    * value but a different termType.
    */
@@ -90,6 +103,11 @@ export class MemoizedHashFactory extends PlainFactory implements IdentityFactory
   }
 
   public blankNode(value?: string): BlankNode {
+    if (process.env.NODE_ENV !== "development") {
+      if (value && typeof value !== "string") {
+        throw new TypeError(`Value of BlankNode has to be type string, was '${value}'`)
+      }
+    }
     const usedValue = value || `b${++this.bnIndex}`;
     const id = this.id({ termType: "BlankNode", value: usedValue });
     if (this.memoizationMap[id]) {
@@ -104,6 +122,11 @@ export class MemoizedHashFactory extends PlainFactory implements IdentityFactory
   }
 
   public namedNode(value: string): NamedNode {
+    if (process.env.NODE_ENV !== "development") {
+      if (typeof value !== "string") {
+        throw new TypeError(`Value of NamedNode has to be type string, was '${value}'`)
+      }
+    }
     const id = this.id({ termType: "NamedNode", value });
     if (this.memoizationMap[id]) {
       return this.memoizationMap[id] as NamedNode;
@@ -201,11 +224,6 @@ export class MemoizedHashFactory extends PlainFactory implements IdentityFactory
     }
 
     return this.id(a) === this.id(b);
-  }
-
-  /** @deprecated Use {fromId} instead */
-  public findById (id: number): AnyRDFObject {
-    return this.fromId(id);
   }
 
   public fromId(id: number | string): AnyRDFObject {
