@@ -33,10 +33,13 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@ontologies/core": "1.5.2-strict-15",
     "murmurhash-js": "^1.0.0"
   },
+  "peerDependencies": {
+    "@ontologies/core": "*"
+  },
   "devDependencies": {
+    "@ontologies/core": "1.5.2-strict-15",
     "typescript": "^3.6.4"
   }
 }
