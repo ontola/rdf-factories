@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ontologies/core@1.5.2-strict-15":
-  version "1.5.2-strict-15"
-  resolved "https://registry.yarnpkg.com/@ontologies/core/-/core-1.5.2-strict-15.tgz#2d3510ca2633748b7b7cfe0d3b64c31fad571d74"
-  integrity sha512-CAT55rywpOREF/POqLpvGvlWM3RMzGNn8llE5L+15laOVdaJbxdtP4H/qdm/uHrL/kaRFn9e+Guizm2XUfAnIg==
+"@ontologies/core@1.5.2-strict-20":
+  version "1.5.2-strict-20"
+  resolved "https://registry.yarnpkg.com/@ontologies/core/-/core-1.5.2-strict-20.tgz#60ad96c2748446281c16004170e7c9dee9d80f8b"
+  integrity sha512-1u6sgoT4EvcaRtfGnM9lyAa9BE6xtyg3Mqzk430R5f/vztU+fOc8nTKmlV8KIRxowzKZi124EJ76pI9cFk+8Fg==
   dependencies:
     "@ungap/global-this" "^0.3.1"
 
@@ -19,7 +19,7 @@ murmurhash-js@^1.0.0:
   resolved "https://registry.yarnpkg.com/murmurhash-js/-/murmurhash-js-1.0.0.tgz#b06278e21fc6c37fa5313732b0412bcb6ae15f51"
   integrity sha1-sGJ44h/Gw3+lMTcysEEry2rhX1E=
 
-typescript@^3.6.4:
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.4.tgz#b18752bb3792bc1a0281335f7f6ebf1bbfc5b91d"
-  integrity sha512-unoCll1+l+YK4i4F8f22TaNVPRHcD9PA3yCuZ8g5e0qGqlVlJ/8FSateOLLSagn+Yg5+ZwuPkL8LFUc0Jcvksg==
+typescript@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.2.tgz#27e489b95fa5909445e9fef5ee48d81697ad18fb"
+  integrity sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
