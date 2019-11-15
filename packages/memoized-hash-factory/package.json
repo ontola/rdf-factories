@@ -1,6 +1,6 @@
 {
   "name": "@ontola/memoized-hash-factory",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "RDF Factory optimized for memory usage.",
   "keywords": [
     "rdf",
