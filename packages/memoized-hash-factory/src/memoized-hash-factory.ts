@@ -118,6 +118,8 @@ export class MemoizedHashFactory extends PlainFactory implements IdentityFactory
     term.value = usedValue;
     term.id = id;
 
+    this.memoizationMap[id] = term;
+
     return term;
   }
 
