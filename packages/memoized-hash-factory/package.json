@@ -26,7 +26,7 @@
   },
   "scripts": {
     "build": "pika build",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "exit 0"
   },
   "@pika/pack": {
     "pipeline": [
