@@ -4,8 +4,12 @@
   "author": "Fletcher91 <thom@ontola.io>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build": "lerna run build",
+    "publish": "lerna publish from-package --contents pkg"
+  },
   "devDependencies": {
-    "lerna": "^3.18.1",
+    "lerna": "^3.19.0",
     "typescript": "^3.7.2"
   }
 }
