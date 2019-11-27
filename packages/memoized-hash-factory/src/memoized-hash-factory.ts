@@ -2,7 +2,7 @@ import {
   BlankNode,
   Comparable,
   DataFactory,
-  IdentityFactory,
+  Indexable,
   Literal,
   NamedNode,
   PlainFactory,
@@ -81,7 +81,7 @@ const datatypes = {
  *
  * This version uses hashing which might be more CPU consuming but has deterministic id creation.
  */
-export class MemoizedHashFactory extends PlainFactory implements IdentityFactory<number, AnyRDFObject>, MemoizedHashFactoryInternals {
+export class MemoizedHashFactory extends PlainFactory implements DataFactory<AnyRDFObject>, MemoizedHashFactoryInternals {
   public bnIndex: number;
   /**
    * The seed  is used as a modifiable base index.
@@ -228,7 +228,7 @@ export class MemoizedHashFactory extends PlainFactory implements IdentityFactory
     return this.id(a) === this.id(b);
   }
 
-  public fromId(id: number | string): AnyRDFObject {
+  public fromId(id: Indexable): BlankNode | NamedNode | Literal | Quad {
     return this.memoizationMap[id];
   }
 

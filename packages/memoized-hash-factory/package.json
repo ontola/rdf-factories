@@ -39,7 +39,8 @@
     "@ontologies/core": "*"
   },
   "devDependencies": {
-    "@ontologies/core": "1.5.2-strict-20",
+    "@ontologies/core": "^1.7.2",
+    "@types/murmurhash-js": "^1.0.3",
     "typescript": "^3.7.2"
   }
 }

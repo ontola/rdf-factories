@@ -2,12 +2,17 @@
 # yarn lockfile v1
 
 
-"@ontologies/core@1.5.2-strict-20":
-  version "1.5.2-strict-20"
-  resolved "https://registry.yarnpkg.com/@ontologies/core/-/core-1.5.2-strict-20.tgz#60ad96c2748446281c16004170e7c9dee9d80f8b"
-  integrity sha512-1u6sgoT4EvcaRtfGnM9lyAa9BE6xtyg3Mqzk430R5f/vztU+fOc8nTKmlV8KIRxowzKZi124EJ76pI9cFk+8Fg==
+"@ontologies/core@^1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@ontologies/core/-/core-1.7.2.tgz#63ef4faff847d5aed8340c66d4043a464c0c305f"
+  integrity sha512-/dzTlXvTNaMjebe/yakc3/FPTpTrGYXudE34Uqm85Lgu5d8jyLNjqNdPHgVl3xrd+lDuwgLKYWcQEP9gxnTBtQ==
   dependencies:
     "@ungap/global-this" "^0.3.1"
+
+"@types/murmurhash-js@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@types/murmurhash-js/-/murmurhash-js-1.0.3.tgz#0e8c0a1db692c062ea4f7e1093fc1ba1d1839298"
+  integrity sha512-PxJwTlcFOBRPqv9pSoC3O1FpKN8GnM5hMJIkG6U3omH8b4GAh28fO1c+TMR4oxj0BG43/ICbrIK3KBfzad2heg==
 
 "@ungap/global-this@^0.3.1":
   version "0.3.1"
