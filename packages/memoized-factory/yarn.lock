@@ -693,10 +693,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@ontologies/core@^1.7.2":
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/@ontologies/core/-/core-1.7.2.tgz#63ef4faff847d5aed8340c66d4043a464c0c305f"
-  integrity sha512-/dzTlXvTNaMjebe/yakc3/FPTpTrGYXudE34Uqm85Lgu5d8jyLNjqNdPHgVl3xrd+lDuwgLKYWcQEP9gxnTBtQ==
+"@ontologies/core@^2.0.0-4":
+  version "2.0.0-4"
+  resolved "https://registry.yarnpkg.com/@ontologies/core/-/core-2.0.0-4.tgz#2450faae075949cfbd2ed3059791e4a047f203de"
+  integrity sha512-+vs3cSnDlENSfcrTWVmZJlkQrWt/9hj4Cc9Q4lZLqX+zkDmZbRQHPpNS9NxNzG2kLeEGNId5+ATZI82JxlP0iw==
   dependencies:
     "@ungap/global-this" "^0.3.1"
 

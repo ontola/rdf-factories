@@ -46,10 +46,10 @@
     ]
   },
   "peerDependencies": {
-    "@ontologies/core": "*"
+    "@ontologies/core": ">= 2.0.0"
   },
   "devDependencies": {
-    "@ontologies/core": "^1.7.2",
+    "@ontologies/core": "^2.0.0-4",
     "@pika/pack": "^0.5.0",
     "@pika/plugin-build-node": "^0.8.1",
     "@pika/plugin-build-web": "^0.8.1",

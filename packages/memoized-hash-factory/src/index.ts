@@ -2,6 +2,7 @@ import {
   BlankNode,
   Comparable,
   DataFactory,
+  Feature,
   Indexable,
   Literal,
   NamedNode,
@@ -82,6 +83,16 @@ const datatypes = {
  * This version uses hashing which might be more CPU consuming but has deterministic id creation.
  */
 export class MemoizedHashFactory extends PlainFactory implements DataFactory<AnyRDFObject>, MemoizedHashFactoryInternals {
+  public static FactorySupport = {
+    [Feature.collections]: false,
+    [Feature.defaultGraphType]: false,
+    [Feature.equalsMethod]: false,
+    [Feature.id]: true,
+    [Feature.identity]: true,
+    [Feature.reversibleId]: true,
+    [Feature.variableType]: false,
+  };
+
   public bnIndex: number;
   /**
    * The seed  is used as a modifiable base index.
@@ -94,7 +105,7 @@ export class MemoizedHashFactory extends PlainFactory implements DataFactory<Any
   private readonly base: any;
 
   constructor(opts: DataFactoryArgs = {}) {
-    super(opts);
+    super({ supports: MemoizedHashFactory.FactorySupport, ...opts });
 
     this.bnIndex = opts.bnIndex || 0;
     this.memoizationMap = opts.memoizationMap || {};
