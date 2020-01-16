@@ -73,6 +73,11 @@ const datatypes = {
   string: "http://www.w3.org/2001/XMLSchema#string",
 };
 
+function createException(type: string, value: any) {
+  const valueType = (value && typeof value === "object") ? value.constructor : typeof value;
+  return new TypeError(`Value of ${type} has to be type string, was value '${value}' of type '${valueType}'`)
+}
+
 /**
  * RDF DataFactory which stores every value once at most.
  *
@@ -108,10 +113,8 @@ export class MemoizedHashFactory extends PlainFactory implements DataFactory<Any
   }
 
   public blankNode(value?: string): BlankNode {
-    if (process.env.NODE_ENV !== "development") {
-      if (value && typeof value !== "string") {
-        throw new TypeError(`Value of BlankNode has to be type string, was '${value}'`)
-      }
+    if (value && typeof value !== "string") {
+      throw createException("BlankNode", value)
     }
     const usedValue = value || `b${++this.bnIndex}`;
     const mapId = this.mapId({ termType: "BlankNode", value: usedValue });
@@ -130,10 +133,8 @@ export class MemoizedHashFactory extends PlainFactory implements DataFactory<Any
   }
 
   public namedNode(value: string): NamedNode {
-    if (process.env.NODE_ENV !== "development") {
-      if (typeof value !== "string") {
-        throw new TypeError(`Value of NamedNode has to be type string, was '${value}'`)
-      }
+    if (typeof value !== "string") {
+      throw createException("NamedNode", value)
     }
     const mapId = this.mapId({ termType: "NamedNode", value });
     if (this.namedNodeMap[mapId]) {
