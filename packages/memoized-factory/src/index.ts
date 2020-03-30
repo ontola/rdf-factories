@@ -89,6 +89,7 @@ export class MemoizedHashFactory extends PlainFactory implements DataFactory<Any
     [Feature.defaultGraphType]: false,
     [Feature.equalsMethod]: false,
     [Feature.id]: true,
+    [Feature.idStamp]: true,
     [Feature.identity]: true,
     [Feature.reversibleId]: true,
     [Feature.variableType]: false,
