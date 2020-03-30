@@ -26,7 +26,8 @@
   },
   "scripts": {
     "build": "pika build",
-    "test": "exit 0"
+    "test": "exit 0",
+    "version": "npm run build"
   },
   "@pika/pack": {
     "pipeline": [
