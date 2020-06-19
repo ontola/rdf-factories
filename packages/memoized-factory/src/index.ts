@@ -104,12 +104,12 @@ export class MemoizedHashFactory extends PlainFactory implements DataFactory<Any
   public quadMap: { [k: string]: Quad } = {};
 
   private readonly base: any;
-  private index = 0;
+  private index = 1;
 
   constructor(opts: DataFactoryArgs = {}) {
     super({ supports: MemoizedHashFactory.FactorySupport, ...opts });
 
-    this.bnIndex = opts.bnIndex || 0;
+    this.bnIndex = opts.bnIndex || 1;
     this.base = rdfBase(this);
   }
 

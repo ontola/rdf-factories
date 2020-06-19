@@ -113,7 +113,7 @@ export class MemoizedHashFactory extends PlainFactory implements DataFactory<Any
   constructor(opts: DataFactoryArgs = {}) {
     super({ supports: MemoizedHashFactory.FactorySupport, ...opts });
 
-    this.bnIndex = opts.bnIndex || 0;
+    this.bnIndex = opts.bnIndex || 1;
     this.memoizationMap = opts.memoizationMap || {};
     this.seedBase = opts.seedBase || 0;
     this.base = rdfBase(this);
