@@ -117,7 +117,7 @@ export class MemoizedHashFactory extends PlainFactory implements DataFactory<Any
     if (value && typeof value !== "string") {
       throw createException("BlankNode", value)
     }
-    const usedValue = value || `b${++this.bnIndex}`;
+    const usedValue = value || `_:b${++this.bnIndex}`;
     const mapId = this.mapId({ termType: "BlankNode", value: usedValue });
     if (mapId && this.blankNodeMap[mapId]) {
       return this.blankNodeMap[mapId] as BlankNode;
