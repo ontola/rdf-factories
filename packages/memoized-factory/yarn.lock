@@ -693,10 +693,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@ontologies/core@=2.0.0-7":
-  version "2.0.0-7"
-  resolved "https://registry.yarnpkg.com/@ontologies/core/-/core-2.0.0-7.tgz#532c94b4f9454d2a7c8da371275baadceb29c63d"
-  integrity sha512-7cKgLyH58kMWRVoRJgquqONybtmYROza3/2Vgumhiun5654RtulXYePF5blNvMLxKtXXfTxPMiGQMCGWfpZ+bQ==
+"@ontologies/core@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@ontologies/core/-/core-2.0.3.tgz#9836357eb07e6e9e8eecb3c10cef99ba375ee95d"
+  integrity sha512-tEzBkB263DyKAey4sAVg/ZbiZtcaLdPMh8qOz+KOAV14KkLkjKmD9dT9/yAIFP3qc/VJk20RgplmTQI22VvQvQ==
   dependencies:
     "@ungap/global-this" "^0.3.1"
 
@@ -3124,10 +3124,10 @@ type-fest@^0.8.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
-typescript@^3.7.2:
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.2.tgz#27e489b95fa5909445e9fef5ee48d81697ad18fb"
-  integrity sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
+typescript@^4.7.2:
+  version "4.7.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.2.tgz#1f9aa2ceb9af87cca227813b4310fff0b51593c4"
+  integrity sha512-Mamb1iX2FDUpcTRzltPxgWMKy3fhg0TN378ylbktPGPK/99KbDtMQ4W1hwgsbPAsG3a0xKa1vmw4VKZQbkvz5A==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
